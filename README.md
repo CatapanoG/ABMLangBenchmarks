@@ -17,8 +17,8 @@ The model is implemented in the same way (as best as I can) across different lan
 
 Num agents: 10000; Time steps: 1000:
 
-Pyhton: 2082sec (34.7mins) (347x)
+Pyhton: 2082" (or 34.7') (347x)
 
-Java: 59secs (9.83x)
+Java: 59" (9.83x)
 
-C++: 6secs (1x)
+C++: 6" (1x)
