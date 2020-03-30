@@ -3,11 +3,11 @@ ABM language benchmarking
 
 ## Model:
 
-A simple econophysics-like model: agents exchange randomly random sums of money.
+A simple econophysics-like model: random agent pairs exchange random sums of money.
 
 ## Benchmarking technicque:
 
-The model is implemented in the same way (as best as I can) across different languages/platforms.
+The model is implemented in the same way (as best as I can) across different languages/platforms. In this version there is a single class (central register) that holds all the information about the agents. Agents themselves call the 'central register' to know and manipulate their holdings.
 
 ## Results (so far):
 
