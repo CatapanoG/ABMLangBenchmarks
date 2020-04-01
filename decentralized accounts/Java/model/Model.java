@@ -15,42 +15,42 @@ public class Model {
 	public void init()
 	{
 		centralRegister = new repositories.CentralRegister();
-		centralRegister.addNewItemType(new items.Item(false, null, 0));
+		items.Item newItem = new items.Item(false, null, 0);
+		centralRegister.addNewItemType(newItem);
 		
-		for (int i = 0; i < 1000; i++)
+		for (int i = 0; i < 100000; i++)
 		{
 			agents.Agent newAgent = new agents.Agent();
+			newAgent.addItemType(newItem);
+			newAgent.setItemQnt(newItem, 10);
+			
 			centralRegister.addAgent(newAgent);
-			centralRegister.setItemQuantity(newAgent, 0, 10);
 		}
 		
-		System.out.println(centralRegister.getItemsRegister());
+		centralRegister.printItemDistribution(newItem);
 	}
 	
 	public void step()
-	{
-		// nothings
-		
+	{	
 		ArrayList<agents.Agent> agents = centralRegister.getAgentsList();
+		ArrayList<items.Item> items = centralRegister.getItemsList();
 		
 		for (int i = 0; i < agents.size(); i++)
 		{
-			int agentCash = centralRegister.getAgentItemHolding(agents.get(i), 0);
+			int agentCash = agents.get(i).getItemQntOwned(items.get(0));
 			int qntExchanged = r.nextInt(agentCash);
 			int receiverAgentIndex =  r.nextInt(agents.size());
 			
-			centralRegister.transferItem(agents.get(i), agents.get(receiverAgentIndex), 0, qntExchanged);
+			agents.get(i).sendItemQnt(agents.get(receiverAgentIndex), items.get(0), qntExchanged);
 		}
 		
 		time++;
 		
 		if (time % 1000 == 0)
-		{
-			//System.out.println(centralRegister.getItemsRegister());	
-			//System.out.println(centralRegister.getItemTotQnt(0));
-			//System.out.println(centralRegister.getAgentsList().size());
+		{	
+			//centralRegister.printItemDistribution(items.get(0));
+			//System.out.println(centralRegister.getItemTotQnt(items.get(0)));
 		}
-		
 	}
 
 }
