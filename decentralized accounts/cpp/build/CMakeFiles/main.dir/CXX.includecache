@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/gennaro/git/ABMLangBenchmark/ABMLangBenchmarks/decentralized accounts/cpp/src/AAAMAIN.cpp
+chrono
+-
+iostream
+-
+list
+-
+

@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libcentralRegister.a  CMakeFiles/centralRegister.dir/src/Centralregister.cpp.o
+/usr/bin/ranlib ../lib/libcentralRegister.a

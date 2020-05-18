@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -O3 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs CMakeFiles/main.dir/src/AAAMAIN.cpp.o  -o main  ../lib/libmodel.a ../lib/libcentralRegister.a ../lib/libagent.a ../lib/libitem.a 

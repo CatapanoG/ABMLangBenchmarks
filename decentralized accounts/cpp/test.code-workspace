@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"unordered_map": "cpp",
+			"__hash_table": "cpp",
+			"utility": "cpp",
+			"iostream": "cpp",
+			"chrono": "cpp"
+		}
+	}
+}
